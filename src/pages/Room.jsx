@@ -44,7 +44,6 @@ function Room() {
         [Query.orderDesc("$createdAt")]
       );
       setMessages(response.documents);
-      console.log("Documents:", response);
     } catch (error) {
       console.error("Error Fetching Documents:", error);
     }

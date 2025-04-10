@@ -15,7 +15,6 @@ export const createDocument = async () => {
       ID.unique(),
       {}
     );
-    console.log("Document Created:", response);
   } catch (error) {
     console.error("Error Creating Document:", error);
   }

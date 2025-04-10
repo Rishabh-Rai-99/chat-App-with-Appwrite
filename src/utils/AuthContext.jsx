@@ -47,7 +47,6 @@ export const AuthProvider = ({children})=>{
           credentials.password1,
           credentials.username,
         )
-        console.log("REGISTERD: ",response);
         await account.createEmailPasswordSession(credentials.email, credentials.password1);
         const accountDetails = await account.get();
         setUser(accountDetails);
@@ -67,7 +66,6 @@ export const AuthProvider = ({children})=>{
       
         try {
           const response = await account.createEmailPasswordSession(credentials.email, credentials.password);
-          console.log("LOGGED IN: ", response);
           const accountDetails = await account.get();
           setUser(accountDetails);
           return true;
